@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>teste html</title>
+   
+</head>
+
+
+<body id="conteudo">
+    <div>
+        <h2 class="menu">Aceita programar comigo? </h2>
+        <button class="btn" onclick="sim()">SIM</button>
+        <button class= "btn" onmouseover="nao(this)">NÃO</button>
+    </div>
+    
+</body>
+
+<style>
+    #conteudo{
+    background-color: rgb(80, 89, 224);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+.btn{
+    background: black;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 80px;
+    border-radius: 5px;
+}
+
+.menu{
+    background: rgb(17, 0, 248);
+    color: white;
+    padding: 50px;
+    border-radius: 300px;
+    text-align: center;
+}
+
+</style>
+
+<script>
+    function sim(){
+     alert("Você aceitou programar comigo! 😎")
+    }
+
+    function nao(t){
+     var btn = t;
+     btn.style.position = "absolute";
+     btn.style.bottom = geraPosicao(10, 90);
+     btn.style.left = geraPosicao(10, 90);
+     console.log("Opa, desviei...");
+    }
+
+    function geraPosicao(min, max){
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+
+</script>
+</html>
